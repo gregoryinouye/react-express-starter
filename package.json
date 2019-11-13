@@ -4,7 +4,7 @@
   "description": "Basic React and Express Starter App",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watch",
     "react-dev": "webpack -w",
     "start": "nodemon ./server/index.js"
   },
@@ -24,6 +24,10 @@
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
     "babel-loader": "^8.0.6",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "enzyme-to-json": "^3.4.3",
+    "jest": "^24.9.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9"
   },
@@ -43,5 +47,11 @@
     "plugins": [
       "@babel/plugin-proposal-class-properties"
     ]
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/src/setupTests.js"
+    ],
+    "verbose": true
   }
 }
